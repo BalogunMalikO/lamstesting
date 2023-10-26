@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import "./App.css";
+import UploadList from './components/Uploads/UploadList';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <AppHeader />
+      <section className='container'>
+        <UploadList />
+      </section>
+    </main>
+
   );
+}
+
+
+function AppHeader(){
+
+  return (
+    <header>
+      <nav className="navbar navbar-light bg-light">
+        <a className="navbar-brand" href="#">
+          <img src={logo} width="60" height="60" className="d-inline-block align-top" alt="" />
+          Pluritongues LAMS
+        </a>
+      </nav>
+    </header>
+  );
+
 }
 
 export default App;
