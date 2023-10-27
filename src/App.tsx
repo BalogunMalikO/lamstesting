@@ -4,6 +4,9 @@ import logo from './logo.svg'
 import "./App.css";
 import UploadList from './components/Uploads/UploadList';
 import Dashboard from './components/dashboard/Dashboard';
+import UploadAsset from './components/UploadAsset/UploadAsset';
+// import Login from './components/auth/Login';
+import Login from './components/auth/Login';
 
 
 function App() {
@@ -14,7 +17,9 @@ function App() {
             <section className='container'>
               <Routes>
                 <Route path='/' element={<Dashboard />}></Route>
+                <Route path='/login' element={<Login />}></Route>
                 <Route path='/list' element={<UploadList />}></Route>
+                <Route path='/upload' element={<UploadAsset/>}></Route>
               </Routes>
             </section>
           </main>

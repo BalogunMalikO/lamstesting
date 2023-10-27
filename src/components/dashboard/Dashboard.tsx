@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 type pDashBoardCard = {
     title: string,
-    count: number
+    count: number,
+    view: string,
+    upload: string
 }
 
 function Dashboard(){
@@ -12,9 +15,9 @@ function Dashboard(){
             <h1 className="h3 mb-0 text-gray-800"> All Assets</h1>
 
             <section className="row">
-                <DashBoardCards title="Audio" count={6} />
-                <DashBoardCards title="Graphics" count={6} />
-                <DashBoardCards title="Text" count={6} />
+                <DashBoardCards title="Audio" count={6} view="list" upload="upload" />
+                <DashBoardCards title="Graphics" count={6} view="list" upload="upload" />
+                <DashBoardCards title="Text" count={6} view="list" upload="upload" />
             </section>
 
         </section>
@@ -24,7 +27,7 @@ function Dashboard(){
 
 function DashBoardCards(props: pDashBoardCard){
 
-    const {title, count} = props
+    const {title, count, view, upload} = props
 
     return (
         <div className="col-xl-3 col-md-6 mb-4">
@@ -33,8 +36,14 @@ function DashBoardCards(props: pDashBoardCard){
                     <h5 className="card-title">{title}</h5>
                     <h6 className="card-subtitle md-2 text-muted">count: {count}</h6>
 
-                    <a href="#" className="card-link">View</a>
-                    <a href="#" className="card-link">Upload</a>
+
+                    
+                    <a href="#" className="card-link">
+                        <Link to={`/${upload}`}>View</Link>
+                    </a>
+                    <a href="#" className="card-link">
+                        <Link to={`/${view}`}></Link>
+                    </a>
                 </div>
             </div>
         </div>
