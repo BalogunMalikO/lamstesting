@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg'
 import "./App.css";
 import UploadList from './components/Uploads/UploadList';
+import Dashboard from './components/dashboard/Dashboard';
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <main>
       <AppHeader />
       <section className='container'>
-        <UploadList />
+        {/* <UploadList /> */}
+        <Dashboard />
       </section>
     </main>
 

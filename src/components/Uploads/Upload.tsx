@@ -1,34 +1,26 @@
 import React from "react";
 
 
-type Props = {
-    post: {
-        title: string;
-    }
+ type pUpload = {
+    title: string,
+    language: string,
+    level: string,
+
 }
 
+ function Upload(props: pUpload){
 
-function Upload(){
+    const {title, language, level} = props
 
     return (
-        <div className="card">
-            <div className="card-body">
-                This is some text within a card body.
-            </div>
-        </div>
+        <tr>
+            <th scope="row">Play</th>
+            <td>{title}</td>
+            <td>{language}</td>
+            <td>{level}</td>
+        </tr>
     )
 }
 
-
-// function Upload({post} : Props){
-
-//     return (
-//         <div className="card">
-//             <div className="card-body">
-//                 This is some text within a card body.
-//             </div>
-//         </div>
-//     )
-// }
 
 export default Upload
