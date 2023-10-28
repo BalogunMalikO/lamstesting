@@ -17,12 +17,14 @@ function App() {
             <section className='container'>
               <Routes>
                 <Route path='/' element={<Dashboard />}></Route>
-                <Route path='/login' element={<Login />}></Route>
                 <Route path='/list' element={<UploadList />}></Route>
                 <Route path='/upload' element={<UploadAsset/>}></Route>
               </Routes>
             </section>
           </main>
+          <Routes>
+            <Route path='/login' element={<Login />}></Route>
+          </Routes>
         </Router>
   );
 }
