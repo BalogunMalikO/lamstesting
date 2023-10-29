@@ -14,7 +14,9 @@ import React from "react";
 
     return (
         <tr>
-            <th scope="row">Play</th>
+            <th scope="row">
+                <button className="primary">Play</button>
+            </th>
             <td>{title}</td>
             <td>{language}</td>
             <td>{level}</td>

@@ -38,11 +38,11 @@ function DashBoardCards(props: pDashBoardCard){
 
 
                     
-                    <a href="#" className="card-link">
+                    <a href="#" className="btn btn-outline-primary card-link">
                         <Link to={`/${upload}`}>View</Link>
                     </a>
-                    <a href="#" className="card-link">
-                        <Link to={`/${view}`}></Link>
+                    <a href="#" className="btn btn-primary">
+                        <Link to={`/${view}`}>list</Link>
                     </a>
                 </div>
             </div>

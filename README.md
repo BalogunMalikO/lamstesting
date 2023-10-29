@@ -1,6 +1,11 @@
 # Introduction
 This is the client application for managing the languege learning assets of pluritongues. This includes the graphics, audio and text at the moment. It accepts these assets and process them over to the API service handling the assets also from here you can manage and view the language learning assets.
 
+From this application authorized personels should be able to:
+* Upload new assets
+* View or play them as the case might be
+* Manage the asset
+
 The application is written using Reactjs and TypeScript.
 
 # Getting Started
