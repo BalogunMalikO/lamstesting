@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.upload-box{
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 500px;
+  padding: 6px;
+  background-color: aliceblue;
+  margin-left: 430px;
+  margin-top: 90px;
+  border: 3px dotted #04cdfa;
+ 
+}
+.row{
+  justify-content: center;
+  align-items: center;
+}
+.card-img-top{
+  width: 80px;
+}

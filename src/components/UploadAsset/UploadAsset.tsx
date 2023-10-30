@@ -10,7 +10,7 @@ function UploadAsset(){
             <div className="form-row row">
                 <div className="form-group col-md-6">
                     <label htmlFor="fileTitle">File Title</label>
-                    <input type="text" className="form-control" id="fileTitle" placeholder="File Title" />
+                    <input type="text" className="form-control" id="fileTitle" placeholder="Write file title here" />
                 </div>
 
                 <div className="form-group col-md-6">
@@ -43,10 +43,11 @@ function UploadAsset(){
             </div>
 
 
-            <div className="form-row row">
+            <div className="form-row">
                 <div className="form-group col-md-6">
                     <label htmlFor="description">Description</label>
-                    <textarea id="description"></textarea>
+                    <textarea className ="form-control" rows={5}
+                    id="description"></textarea>
                 </div>
             </div>
 

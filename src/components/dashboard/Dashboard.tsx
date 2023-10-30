@@ -1,54 +1,82 @@
+import { upload } from "@testing-library/user-event/dist/upload";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import logo1 from "../../image/logo192.png";
+import { isUTCTimestamp } from "lightweight-charts";
+import { isDate } from "util/types";
+import audioIcon from "../../image/aUDIO aSSETSLAMS ASSET.svg";
+import instructionIcon from "../../image/iNSTRUCTION aSSETSLAMS ASSET.svg";
+import graphicIcon from "../../image/gRAPHIC aSSETSLAMS ASSET.svg";
 type pDashBoardCard = {
-    title: string,
-    count: number,
-    view: string,
-    upload: string
+  title: string;
+  count: number;
+  view: string;
+  upload: string;
+  image: any;
+};
+
+function Dashboard() {
+  return (
+    <section className="container">
+      <h1 className="h3 mb-0 text-gray-800"> All Assets</h1>
+
+      <section className="row">
+        {/* <img className="img-fluid" src={logo1} alt="New York"></img> */}
+        <DashBoardCards
+          title="Audio Asset"
+          count={6}
+          view="list"
+          upload="upload"
+          image={audioIcon}
+        />
+        <DashBoardCards
+          title="Graphics Asset"
+          count={6}
+          view="list"
+          upload="upload"
+          image={graphicIcon}
+        />
+        <DashBoardCards
+          title="Text Asset"
+          count={6}
+          view="list"
+          upload="upload"
+          image={instructionIcon}
+        />
+      </section>
+      <button className="upload-box">
+        <a href="#" className="btn btn-primary">
+          <Link to={"upload"}>Click Here to Upload</Link>
+        </a>
+      </button>
+    </section>
+  );
 }
 
-function Dashboard(){
+function DashBoardCards(props: pDashBoardCard) {
+  const { title, count, view, upload, image } = props;
 
-    return (
-        <section className="container">
-            <h1 className="h3 mb-0 text-gray-800"> All Assets</h1>
+  return (
+    <div className="col-xl-3 col-md-4 mb-5">
+      <div className="card border-left-primary shadow h-120px  py-4">
+        <img src={image} className="card-img-top" alt="Graphics Icon"/>
 
-            <section className="row">
-                <DashBoardCards title="Audio" count={6} view="list" upload="upload" />
-                <DashBoardCards title="Graphics" count={6} view="list" upload="upload" />
-                <DashBoardCards title="Text" count={6} view="list" upload="upload" />
-            </section>
+        <div className="card-body">
+          {/* <img className="card-img-top">{=}</img> */}
+          <h5 className="card-title">{title} </h5>
+          <h6 className="card-subtitle md-2 text-muted">count: {count}</h6>
+          <h6 className="card-subtitle md-2 text-muted">Date: {}</h6>
+          <a href="#" className="btn btn-outline-primary card-link">
+            <Link to={`/${upload}`}>View</Link>
+          </a>
 
-        </section>
-    )
-}
-
-
-function DashBoardCards(props: pDashBoardCard){
-
-    const {title, count, view, upload} = props
-
-    return (
-        <div className="col-xl-3 col-md-6 mb-4">
-            <div className="card border-left-primary shadow h-100 py-2">
-                <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
-                    <h6 className="card-subtitle md-2 text-muted">count: {count}</h6>
-
-
-                    
-                    <a href="#" className="btn btn-outline-primary card-link">
-                        <Link to={`/${upload}`}>View</Link>
-                    </a>
-                    <a href="#" className="btn btn-primary">
-                        <Link to={`/${view}`}>list</Link>
-                    </a>
-                </div>
-            </div>
+          <a href="#" className="btn btn-primary">
+            <Link to={`/${view}`}>List</Link>
+          </a>
         </div>
-    )
-
+      </div>
+    </div>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
