@@ -30,4 +30,12 @@ import React from "react";
 }
 
 
+// function UploadTitles(title: string){
+//     return (
+//         <td>
+//             <span className="text-muted">Title</span>
+//         </td>        
+//     )
+// }
+
 export default Upload

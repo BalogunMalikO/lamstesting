@@ -42,15 +42,22 @@ const Uploads: iUpload[]= [
 
 function UploadList(){
     return (
-        <table className="table table-hover">
-            <tbody>
-            {
-                Uploads.map((upload, i) => (
-                    <Upload key={i} title={upload.title} language={upload.language} level={upload.level} />
-                ))
-            }
-            </tbody>       
-        </table>
+
+        <section className="container">
+            <h1 className="h3 mb-0 text-gray-800"> Audio Assets</h1>
+
+            <div className="card border-left-primary shadow h-100 py-2">
+                <table className="table table-hover">
+                    <tbody>
+                    {
+                        Uploads.map((upload, i) => (
+                            <Upload key={i} title={upload.title} language={upload.language} level={upload.level} />
+                        ))
+                    }
+                    </tbody>       
+                </table>
+            </div>
+        </section>
     )
 }
 

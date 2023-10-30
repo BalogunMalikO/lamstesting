@@ -1,9 +1,5 @@
-import { upload } from "@testing-library/user-event/dist/upload";
 import React from "react";
 import { Link } from "react-router-dom";
-import logo1 from "../../image/logo192.png";
-import { isUTCTimestamp } from "lightweight-charts";
-import { isDate } from "util/types";
 import audioIcon from "../../image/aUDIO aSSETSLAMS ASSET.svg";
 import instructionIcon from "../../image/iNSTRUCTION aSSETSLAMS ASSET.svg";
 import graphicIcon from "../../image/gRAPHIC aSSETSLAMS ASSET.svg";
@@ -66,13 +62,17 @@ function DashBoardCards(props: pDashBoardCard) {
           <h5 className="card-title">{title} </h5>
           <h6 className="card-subtitle md-2 text-muted">count: {count}</h6>
           <h6 className="card-subtitle md-2 text-muted">Date: {}</h6>
-          <a href="#" className="btn btn-outline-primary card-link">
-            <Link to={`/${upload}`}>View</Link>
-          </a>
 
-          <a href="#" className="btn btn-primary">
-            <Link to={`/${view}`}>List</Link>
-          </a>
+          <div className="row">
+            <a href="#" className="btn btn-outline-primary card-link col-md-4">
+                <Link to={`/${upload}`}>View</Link>
+            </a>
+
+            <a href="#" className="btn btn-primary col-md-4">
+                <Link to={`/${view}`}>List</Link>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
