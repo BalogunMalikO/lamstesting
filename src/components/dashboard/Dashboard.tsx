@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+// update the naming convention here for the files and assets imported
+//eg. /image/audio/aUDIO aSSETSLAMS ASSET.svg can not have any white space there.
 import audioIcon from "../../image/aUDIO aSSETSLAMS ASSET.svg";
 import instructionIcon from "../../image/iNSTRUCTION aSSETSLAMS ASSET.svg";
 import graphicIcon from "../../image/gRAPHIC aSSETSLAMS ASSET.svg";
@@ -41,9 +43,7 @@ function Dashboard() {
         />
       </section>
       <button className="upload-box">
-        <a href="#" className="btn btn-primary">
-          <Link to={"upload"}>Click Here to Upload</Link>
-        </a>
+        <Link to={"upload"} className="btn btn-primary">Click Here to Upload</Link>
       </button>
     </section>
   );
@@ -52,25 +52,34 @@ function Dashboard() {
 function DashBoardCards(props: pDashBoardCard) {
   const { title, count, view, upload, image } = props;
 
+   const dashboard_styles = {
+        dashboard_card: {
+
+        },
+        dashboard_card_title: {
+            display: "flex",
+            justifyContent: "space-between"
+        },
+    }
+
+
   return (
     <div className="col-xl-3 col-md-4 mb-5">
       <div className="card border-left-primary shadow h-120px  py-4">
-        <img src={image} className="card-img-top" alt="Graphics Icon"/>
 
-        <div className="card-body">
-          {/* <img className="card-img-top">{=}</img> */}
-          <h5 className="card-title">{title} </h5>
+
+        <div className="card-body" >
+          <div className="row justify-content-between" style={dashboard_styles.dashboard_card_title}>
+            <img src={image} className="img-thumbnail" alt="Graphics Icon" style={{width: "81px", height: "81px"}} />
+            <h5 className="card-title"> {title} </h5>
+          </div>
           <h6 className="card-subtitle md-2 text-muted">count: {count}</h6>
           <h6 className="card-subtitle md-2 text-muted">Date: {}</h6>
 
-          <div className="row">
-            <a href="#" className="btn btn-outline-primary card-link col-md-4">
-                <Link to={`/${upload}`}>View</Link>
-            </a>
+          <div className="row justify-content-between">
+            <NavLink className="btn btn-outline-primary card-link col-md-4" to={`/${upload}`}>View</NavLink>
 
-            <a href="#" className="btn btn-primary col-md-4">
-                <Link to={`/${view}`}>List</Link>
-            </a>
+            <NavLink className="btn btn-primary col-md-4" to={`/${view}`}>List</NavLink>
           </div>
 
         </div>
@@ -78,5 +87,6 @@ function DashBoardCards(props: pDashBoardCard) {
     </div>
   );
 }
+
 
 export default Dashboard;
