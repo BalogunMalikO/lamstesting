@@ -7,13 +7,14 @@ function UploadAsset(){
 
     return (
         <form>
-            <div className="form-row row">
+            <div className="form-group row p-4">
                 <div className="form-group col-md-6">
-                    <label htmlFor="fileTitle">File Title</label>
+                    <label htmlFor="fileTitle" className="">File Title</label>
+                    <br/>
                     <input type="text" className="form-control" id="fileTitle" placeholder="Write file title here" />
                 </div>
 
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6 p-4">
                     <label htmlFor="fileType">File Type</label>
                     <select id="fileType" className="form-control">
                         <option>Audio</option>
@@ -24,7 +25,7 @@ function UploadAsset(){
 
 
             <div className="form-group row">
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6 p-4">
                     <label htmlFor="fileType">Language</label>
                     <select id="fileType" className="form-control">
                         { languagesAvailable.map( (language, i) => (
@@ -33,7 +34,7 @@ function UploadAsset(){
                     </select>
                 </div>
 
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6 p-4">
                     <label htmlFor="fileType">Level</label>
                     <select id="fileType" className="form-control">
                         <option>A1</option>
@@ -43,7 +44,7 @@ function UploadAsset(){
             </div>
 
 
-            <div className="form-row">
+            <div className="form-row p-4">
                 <div className="form-group col-md-6">
                     <label htmlFor="description">Description</label>
                     <textarea className ="form-control" rows={5}
@@ -51,13 +52,13 @@ function UploadAsset(){
                 </div>
             </div>
 
-            <div className="form-row row">
-                <div className="form-group col-md-6">
+            <div className="form-row ">
+                <div className="form-group col-md-6 p-4">
                     <label htmlFor="description">Upload</label>
                     <input type="file" className="form-control" id="fileTitle" placeholder="File Title" />
                 </div>
             </div>
-            <button type="submit" className="btn btn-primary">Upload</button>
+            <button type="submit" className="btn btn-primary position-absolute start-50 translate-middle m-4">Save</button>
         </form>
     )
 
