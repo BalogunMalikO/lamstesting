@@ -37,7 +37,7 @@ function AppHeader(){
       <nav className="navbar navbar-light bg-light">
         <a className="navbar-brand" href="#">
           <img src={logo} width="60" height="60" className="d-inline-block align-top" alt="" />
-          Pluritongues LAMS
+          <label className='py-3'>Pluritongues LAMS </label>
         </a>
       </nav>
     </header>
