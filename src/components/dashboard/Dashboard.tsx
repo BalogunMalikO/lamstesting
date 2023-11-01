@@ -43,12 +43,12 @@ function Dashboard() {
         />
       </section>
 
-      <label className="position-absolute middle-100 start-50 translate-middle p-2">
+      <label className="position-absolute middle-100 start-50 translate-middle">
         Click to Upload Asset
       </label>
       
         <Link to={"upload"} className="btn position-absolute top-100 start-50 translate-middle border-0" >
-          <img src={uploadIcon} style={{ width: "400px", height: "400px" }} />
+          <img src={uploadIcon} style={{ width: "500px", height: "500px" }} />
         </Link>
       
     </section>
