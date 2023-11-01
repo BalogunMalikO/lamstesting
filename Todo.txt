@@ -1,3 +1,0 @@
-Move the "click to upload down"
-Create 40 mock data and add pagination
-add the play icon assest
