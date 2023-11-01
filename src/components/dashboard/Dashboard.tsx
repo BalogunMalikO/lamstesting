@@ -17,9 +17,9 @@ type pDashBoardCard = {
 function Dashboard() {
   return (
     <section className="container">
-      <h1 className="h3 mb-0 text-gray-800 p-4"> All Assets</h1>
+      <h1 className="h3 text-gray-800 mt-5"> All Assets</h1>
 
-      <section className="row">
+      <section className="row mt-4">
         <DashBoardCards
           title="Audio Asset"
           count={6}
@@ -90,13 +90,13 @@ function DashBoardCards(props: pDashBoardCard) {
           <div className="row justify-content-between">
             <NavLink
               className="btn btn-outline-primary card-link col-md-4"
-              to={`/${upload}`}
+              to={`/${view}`}
             >
               View
             </NavLink>
 
-            <NavLink className="btn btn-primary col-md-4" to={`/${view}`}>
-              List
+            <NavLink className="btn btn-primary col-md-4" to={`/${upload}`}>
+              Upload
             </NavLink>
           </div>
         </div>

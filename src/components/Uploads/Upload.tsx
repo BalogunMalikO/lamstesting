@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 
  type pUpload = {
@@ -20,22 +21,27 @@ import React from "react";
                 </svg>
             </th>
             <td>
-                <span className="text-muted">Title</span>
-                {title}
+                <span className="cell-title">File title</span>
+                <span className="cell-content">{title}</span>
             </td>
-            <td>{language}</td>
-            <td>{level}</td>
+            <td>
+                <span className="title">Target Language</span>
+                <span className="cell-content">{language}</span>
+            </td>
+
+            <td>
+                <span className="title">Level</span>
+                <span className="cell-content">{level}</span>
+            </td>
+
+            <td>
+                <span className="title">Upload Date</span>
+                <span className="cell-content">10/10/23</span>
+            </td>
         </tr>
     )
 }
 
 
-// function UploadTitles(title: string){
-//     return (
-//         <td>
-//             <span className="text-muted">Title</span>
-//         </td>        
-//     )
-// }
 
 export default Upload

@@ -44,9 +44,9 @@ function UploadList(){
     return (
 
         <section className="container">
-            <h1 className="h3 mb-0 text-gray-800"> Audio Assets</h1>
+            <h1 className="h3 mb-0 text-gray-800 mt-5"> Audio Assets</h1>
 
-            <div className="card border-left-primary shadow h-100 py-2">
+            <div className="card border-left-primary shadow h-100 py-2 mt-5">
                 <table className="table table-hover">
                     <tbody>
                     {

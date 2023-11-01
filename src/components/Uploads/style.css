@@ -1,0 +1,13 @@
+.cell-title{
+    font-weight: 400;
+    size: 13px;
+    color: " #8E98A8";
+    display: block;
+}
+
+.cell-content{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    display: block;
+}
