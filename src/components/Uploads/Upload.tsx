@@ -32,7 +32,7 @@ import pauseIcon from "../../image/pause.png"
                 </svg> */}
                 
                 <img src= {pauseIcon} alt="" className="inactive"  width={18}/>
-                <img src={playIcon} alt="play" className="active" width={18} id={"av"}/> 
+                <img src={playIcon} alt="play" className="active" width={18} /> 
                 
                
             </th>

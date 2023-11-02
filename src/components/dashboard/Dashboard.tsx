@@ -6,6 +6,7 @@ import audioIcon from "../../image/audioAssetLams.svg";
 import instructionIcon from "../../image/instructionAssetLams.svg";
 import graphicIcon from "../../image/graphicAssetLams.svg";
 import uploadIcon from "../../image/uploadAssetLAMS.svg";
+
 type pDashBoardCard = {
   title: string;
   count: number;
@@ -13,6 +14,9 @@ type pDashBoardCard = {
   upload: string;
   image: any;
 };
+type Logo ={
+  _logo: any
+}
 
 function Dashboard() {
   return (
@@ -25,32 +29,29 @@ function Dashboard() {
           count={6}
           view="list"
           upload="upload"
-          image={audioIcon}
-        />
+          image={audioIcon} />
         <DashBoardCards
           title="Graphics Asset"
           count={6}
           view="list"
           upload="upload"
-          image={graphicIcon}
-        />
+          image={graphicIcon} />
         <DashBoardCards
           title="Text Asset"
           count={6}
           view="list"
           upload="upload"
-          image={instructionIcon}
-        />
+          image={instructionIcon} />
       </section>
 
       <label className="position-absolute middle-100 start-50 translate-middle">
         Click to Upload Asset
       </label>
-      
-        <Link to={"upload"} className="btn position-absolute top-100 start-50 translate-middle border-0" >
-          <img src={uploadIcon} style={{ width: "500px", height: "500px" }} />
-        </Link>
-      
+
+      <Link to={"upload"} className="position-absolute bottom-0 start-50 translate-middle-x border-0">
+        <img src={uploadIcon} style={{ width: "300px", height: "400px" }} />
+      </Link>
+
     </section>
   );
 }
