@@ -7,6 +7,9 @@ import Dashboard from './components/dashboard/Dashboard';
 import UploadAsset from './components/UploadAsset/UploadAsset';
 // import Login from './components/auth/Login';
 import Login from './components/auth/Login';
+import exit from "./exit.png"
+import path from 'path';
+import { link } from 'fs/promises';
 
 
 function App() {
@@ -37,6 +40,10 @@ function AppHeader(){
       <nav className="navbar navbar-light bg-light">
         <a className="navbar-brand" href="#">
           <img src={logo} width="60" height="60" className="d-inline-block align-top" alt="" />
+          <Link to={"login"}className='d-inline-block align-top position-absolute top-0 end-0 py-3 px-2'>
+          <img src ={exit} alt="exit" width ={40}/>
+          </Link>
+
           <label className='py-3'>Pluritongues LAMS </label>
         </a>
       </nav>
