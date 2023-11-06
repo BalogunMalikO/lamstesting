@@ -6,6 +6,8 @@ import audioIcon from "../../image/audioAssetLams.svg";
 import instructionIcon from "../../image/instructionAssetLams.svg";
 import graphicIcon from "../../image/graphicAssetLams.svg";
 import uploadIcon from "../../image/uploadAssetLAMS.svg";
+import Logout from "../auth/Logout";
+
 
 type pDashBoardCard = {
   title: string;
@@ -20,10 +22,8 @@ type Logo ={
 
 function Dashboard() {
   return (
-    <section className="container">
-      <h1 className="h3 text-gray-800 mt-5"> All Assets</h1>
-
-      <section className="row mt-4">
+    <><Logout /><section>
+      <h1 className="h3 text-gray-800 mt-5"> All Assets</h1><section className="row mt-4">
         <DashBoardCards
           title="Audio Asset"
           count={6}
@@ -42,17 +42,14 @@ function Dashboard() {
           view="list"
           upload="upload"
           image={instructionIcon} />
-      </section>
-
-      <label className="position-absolute middle-100 start-50 translate-middle">
+      </section><label className="position-absolute middle-100 start-50 translate-middle">
         Click to Upload Asset
       </label>
-
       <Link to={"upload"} className="position-absolute bottom-0 start-50 translate-middle-x border-0">
         <img src={uploadIcon} style={{ width: "300px", height: "400px" }} />
       </Link>
 
-    </section>
+    </section></>
   );
 }
 
