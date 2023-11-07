@@ -1,4 +1,5 @@
 import React from "react";
+import Logout from "../auth/Logout";
 
 
 function UploadAsset(){
@@ -6,11 +7,11 @@ function UploadAsset(){
     const languagesAvailable = ['Igbo', 'Yoruba', 'Swahili'];
 
     return (
-        <form>
+        <><Logout /><form>
             <div className="form-group row p-4">
                 <div className="form-group col-md-6">
                     <label htmlFor="fileTitle" className="">File Title</label>
-                    <br/>
+                    <br />
                     <input type="text" className="form-control" id="fileTitle" placeholder="Write file title here" />
                 </div>
 
@@ -28,9 +29,9 @@ function UploadAsset(){
                 <div className="form-group col-md-6 p-4">
                     <label htmlFor="fileType">Language</label>
                     <select id="fileType" className="form-control">
-                        { languagesAvailable.map( (language, i) => (
+                        {languagesAvailable.map((language, i) => (
                             <option key={i}>{language}</option>
-                        ) ) }
+                        ))}
                     </select>
                 </div>
 
@@ -47,8 +48,8 @@ function UploadAsset(){
             <div className="form-row p-4">
                 <div className="form-group col-md-6">
                     <label htmlFor="description">Description</label>
-                    <textarea className ="form-control" rows={5}
-                    id="description"></textarea>
+                    <textarea className="form-control" rows={5}
+                        id="description"></textarea>
                 </div>
             </div>
 
@@ -59,7 +60,7 @@ function UploadAsset(){
                 </div>
             </div>
             <button type="submit" className="btn btn-primary position-absolute start-50 translate-middle m-4">Save</button>
-        </form>
+        </form></>
     )
 
 }

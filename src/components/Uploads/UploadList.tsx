@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Upload from "./Upload";
 import ReactPaginate from "react-paginate";
+import Logout from "../auth/Logout";
 
 // thinking that I should have this things here
 interface iUpload {
@@ -179,7 +180,7 @@ function UploadList() {
   };
 
   return (
-    <div>
+    <><Logout /><div>
       <section className="container">
         <h1 className="h3 mb-0 text-gray-800 mt-5"> Audio Assets</h1>
 
@@ -192,10 +193,7 @@ function UploadList() {
                     key={i}
                     title={upload.title}
                     language={upload.language}
-                    level={upload.level}
-                    
-                    
-                  />
+                    level={upload.level} />
                 </>
               ))}
             </tbody>
@@ -220,10 +218,9 @@ function UploadList() {
           previousClassName="page-item"
           previousLinkClassName="page-link"
           nextClassName="page-item"
-          nextLinkClassName="page-link"
-        />
+          nextLinkClassName="page-link" />
       </div>
-    </div>
+    </div></>
   );
 }
 
