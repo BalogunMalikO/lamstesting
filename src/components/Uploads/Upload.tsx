@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import playIcon from "../../image/PlayIconAssetLams.svg";
 import pauseIcon from "../../image/pause.png";
-import { time, timeStamp } from "console";
+
 
 type pUpload = {
   title: string;
