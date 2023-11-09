@@ -3,8 +3,10 @@ import Upload from "./Upload";
 import ReactPaginate from "react-paginate";
 import Logout from "../auth/Logout";
 
+
 // thinking that I should have this things here
 interface iUpload {
+ 
   title: string;
   language: string;
   level: string;
@@ -14,11 +16,13 @@ interface iUpload {
 
 const Uploads: iUpload[] = [
   {
+   
     title: "Chidi",
     language: "Igbo",
     level: "2",
   },
   {
+    
     title: "Chidi",
     language: "Igbo",
     level: "2",
@@ -158,7 +162,7 @@ const Uploads: iUpload[] = [
 function UploadList() {
   //set the inital state of the pages
   const [currentPage, setCurrentPage] = useState(0);
-
+ 
   //the amount of items to be displayed per page
   const itemsPerPage = 5;
 
@@ -180,47 +184,61 @@ function UploadList() {
   };
 
   return (
-    <><Logout /><div>
-      <section className="container">
-        <h1 className="h3 mb-0 text-gray-800 mt-5"> Audio Assets</h1>
+    <>
+      <Logout />
+      <div>
+        <section className="container">
+          <h1 className="h3 mb-0 text-gray-800 mt-5"> Audio Assets</h1>
 
-        <div className="card border-left-primary shadow h-100 py-2 mt-5">
-          <table className="table table-hover">
-            <tbody>
-              {subset.map((upload, i) => (
-                <>
-                  <Upload
-                    key={i}
-                    title={upload.title}
-                    language={upload.language}
-                    level={upload.level} />
-                </>
-              ))}
-            </tbody>
-          </table>
+          <div className="card border-left-primary shadow h-100 py-2 mt-5">
+            <table className="table table-hover">
+              <tbody>
+                {subset.map((upload, i) => (
+                  <>
+                    <Upload
+                      key={i}
+                      title={upload.title}
+                      language={upload.language}
+                      level={upload.level}
+                    />
+                  </>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <div className="position-absolute bottom-0 start-0 translate-middle-y">
+          <h5
+            className="h5 mb-0 text-gray-800 text-secondary mt-5"
+            style={{ padding: 21 }}
+          >
+            showing data {currentPage + 1} to {itemsPerPage} of {Uploads.length}{" "}
+            entries
+          </h5>
         </div>
-      </section>
-      <div className="position-absolute bottom-0 start-50 translate-middle-x">
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel=">>"
-          pageCount={totalPages}
-          onPageChange={handlePageChange}
-          forcePage={currentPage}
-          previousLabel="<<"
-          renderOnZeroPageCount={null}
-          breakClassName="page-item"
-          breakLinkClassName="page-link"
-          containerClassName="pagination"
-          activeClassName="active"
-          pageClassName="page-item"
-          pageLinkClassName="page-link"
-          previousClassName="page-item"
-          previousLinkClassName="page-link"
-          nextClassName="page-item"
-          nextLinkClassName="page-link" />
+        <div className="position-absolute bottom-0 start-50 translate-middle-x">
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel=">>"
+            pageCount={totalPages}
+            onPageChange={handlePageChange}
+            forcePage={currentPage}
+            previousLabel="<<"
+            renderOnZeroPageCount={null}
+            breakClassName="page-item"
+            breakLinkClassName="page-link"
+            containerClassName="pagination"
+            activeClassName="active"
+            pageClassName="page-item"
+            pageLinkClassName="page-link"
+            previousClassName="page-item"
+            previousLinkClassName="page-link"
+            nextClassName="page-item"
+            nextLinkClassName="page-link"
+          />
+        </div>
       </div>
-    </div></>
+    </>
   );
 }
 
