@@ -16,9 +16,7 @@ type pDashBoardCard = {
   upload: string;
   image: any;
 };
-type Logo ={
-  _logo: any
-}
+
 
 function Dashboard() {
   return (
@@ -37,7 +35,7 @@ function Dashboard() {
           upload="upload"
           image={graphicIcon} />
         <DashBoardCards
-          title="Text Asset"
+          title="Instruction Asset"
           count={6}
           view="list"
           upload="upload"

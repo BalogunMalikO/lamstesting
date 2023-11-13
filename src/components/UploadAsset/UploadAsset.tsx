@@ -4,7 +4,7 @@ import Logout from "../auth/Logout";
 
 function UploadAsset(){
 
-    const languagesAvailable = ['Igbo', 'Yoruba', 'Swahili'];
+    const languagesAvailable = ['Igbo', 'Yoruba', 'Hausa'];
 
     return (
         <><Logout /><form>
@@ -20,6 +20,8 @@ function UploadAsset(){
                     <select id="fileType" className="form-control">
                         <option>Audio</option>
                         <option>Graphics</option>
+                        <option>Instruction</option>
+                        
                     </select>
                 </div>
             </div>
@@ -40,6 +42,10 @@ function UploadAsset(){
                     <select id="fileType" className="form-control">
                         <option>A1</option>
                         <option>A2</option>
+                        <option>B1</option>
+                        <option>B2</option>
+                        <option>C1</option>
+                        <option>C2</option>
                     </select>
                 </div>
             </div>
