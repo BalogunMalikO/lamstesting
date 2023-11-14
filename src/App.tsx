@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, NavLink } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import UploadList from "./components/Uploads/UploadList";
@@ -10,6 +10,7 @@ import Login from "./components/auth/Login";
 import exit from "./exit.png";
 import path from "path";
 import { link } from "fs/promises";
+import UploadQuestion from "./components/UploadAsset/UploadQuestion";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Dashboard />}></Route>
             <Route path="/list" element={<UploadList />}></Route>
             <Route path="/upload" element={<UploadAsset />}></Route>
+            <Route path="/question" element={<UploadQuestion />}></Route>
           </Routes>
         </section>
       </main>
@@ -43,9 +45,13 @@ function AppHeader() {
             className="d-inline-block align-top"
             alt=""
           />
+         
 
           <label className="py-3">Pluritongues LAMS </label>
         </a>
+        <NavLink to={"/"} >
+          <label className='h5 d-inline-block align-top position-absolute top-0 end-50 py-4'>Dashboard</label>
+         </NavLink>
       </nav>
     </header>
   );
