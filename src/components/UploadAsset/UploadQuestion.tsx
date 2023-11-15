@@ -1,5 +1,6 @@
 import React from "react";
 import Logout from "../auth/Logout";
+import Add_answer from "./Add_answer";
 
 function UploadQuestion() {
   return (
@@ -19,6 +20,10 @@ function UploadQuestion() {
             <br/>
             <input type="text" className="form-control" id="fileTitle" placeholder="Write question here" />
           </div>
+        </div>
+
+        <div>
+          <Add_answer/>
         </div>
 
         <div className="form-group col-md-6 p-4">
