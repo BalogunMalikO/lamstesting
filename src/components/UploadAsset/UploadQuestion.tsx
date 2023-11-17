@@ -1,6 +1,6 @@
 import React from "react";
 import Logout from "../auth/Logout";
-import Add_answer from "./Add_answer";
+import Add_answer from "./addAnswer";
 
 function UploadQuestion() {
   return (
@@ -17,15 +17,17 @@ function UploadQuestion() {
 
           <div className="form-group col-md-6 p-4">
             <label htmlFor="fileType">Question</label>
-            <br/>
-            <input type="text" className="form-control" id="fileTitle" placeholder="Write question here" />
+            <br />
+            <input
+              type="text"
+              className="form-control"
+              id="fileTitle"
+              placeholder="Write question here"
+            />
           </div>
         </div>
 
-        <div>
-          <Add_answer/>
-        </div>
-
+       <div className="form-grop row">
         <div className="form-group col-md-6 p-4">
           <label htmlFor="fileType">Language Tag</label>
           <select id="fileType" className="form-control">
@@ -34,6 +36,12 @@ function UploadQuestion() {
             <option>Hausa</option>
           </select>
         </div>
+
+        <div className="form-group col">
+          <Add_answer />
+        </div>
+
+      </div>
 
         <div className="form-group col-md-6 p-4">
           <label htmlFor="fileType">Language Proficiency</label>
@@ -46,6 +54,7 @@ function UploadQuestion() {
             <option>C2</option>
           </select>
         </div>
+
         <div>
           <button
             type="submit"

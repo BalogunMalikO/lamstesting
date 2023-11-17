@@ -27,7 +27,7 @@ function UploadAsset(){
             </div>
 
 
-            <div className="form-group row">
+            <div className="form-group col">
                 <div className="form-group col-md-6 p-4">
                     <label htmlFor="fileType">Language</label>
                     <select id="fileType" className="form-control">
